@@ -1,5 +1,6 @@
 const User=require('../models/userSchema')
 const jwt=require('jsonwebtoken');
+require('dotenv').config()
 
 module.exports.signup=async (req,res)=>{
     try {
@@ -31,7 +32,7 @@ module.exports.signin=async function(req,res){
         return res.json(200,{
             message:'signin successful',
             data:{
-                token: jwt.sign(user.toJSON(),'codial',{expiresIn:100000})
+                token: jwt.sign(user.toJSON(),process.env.SECRET_KEY,{expiresIn:100000})
             }
         })
     } catch (error) {

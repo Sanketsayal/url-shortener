@@ -1,6 +1,7 @@
 const mongoose=require('mongoose')
+require('dotenv').config()
 
-mongoose.connect('mongodb://localhost/url-shortener');
+mongoose.connect(process.env.MONGO_URL);
 const db=mongoose.connection;
 db.on('error',console.error.bind(console,'error in connecting to database'));
 db.once('open',function(){
