@@ -5,11 +5,11 @@ a RESTful API for a URL shortening service – a tool that transforms lengthy UR
 node.js, MongoDB, Postman, VSCode
 
 ### Environment variables
-MONGO_URL='mongodb://localhost/url-shortener'
+MONGO_URL='mongodb://localhost/url-shortener'\
 SECRET_KEY='codial'
 
 ### test account 
-email: snkt@gmail.com
+email: snkt@gmail.com\
 password: 123
 
 ## Steps for running the api in local machine
@@ -20,3 +20,7 @@ password: 123
 5. now you can access the api using postman or any other api app
 
 ## Functionalities
+1. register as a user\
+    http://localhost:8888/user/signup\
+    in body enter email and password\
+    ![Alt text](<Screenshot (4).png>)
