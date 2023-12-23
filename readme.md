@@ -21,6 +21,27 @@ password: 123
 
 ## Functionalities
 1. register as a user\
-    http://localhost:8888/user/signup\
-    in body enter email and password\
+    localhost:8888/user/signup \
+    in body enter email and password \
     ![Alt text](<Screenshot (4).png>)
+
+2. user signin \
+    localhost:8888/user/signup \
+    in body enter email and password , copy the token recieved in response \
+    ![Alt text](<Screenshot (7).png>)
+
+3. shorten a url \
+    localhost:8888/short
+    in authorization select bearer token and paste the token recieved and in body enter the url with key 'origUrl' then make a post request \
+    ![Alt text](<Screenshot (5).png>)
+
+4. using the short url \
+    click on the shortUrl recieved and send it as a get request and you will be redirected to the original url \
+    ![Alt text](<Screenshot (6).png>)
+
+5. checking all your urls \
+    to view all your saved urls send get request to localhost:8888/my-urls with your authoriation token \
+
+
+### Deployed link for the API
+https://url-shortener-c2l5.onrender.com
